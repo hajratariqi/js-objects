@@ -54,7 +54,7 @@ const cars = {
             },
             calc: ()=>{
                 for (var i = 0; i < cars.corolla.yaris.colors.length; i++) {
-                    if (cars.corolla.yaris.colors == 'gray') {
+                    if (cars.corolla.yaris.colors[i] == 'gray') {
                         cars.corolla.yaris.colors[i] = 'green'
                         console.log("Updated colors:", cars.corolla.yaris.colors);
                         break;
