@@ -68,5 +68,5 @@ const cars = {
 
 console.log('company name:' ,cars.honda.civic.company.name, 'car name' ,cars.honda.civic.name);
 console.log('company name:' ,cars.daihatsu.Move.company.name, 'car name' ,cars.daihatsu.Move.name);
-console.log('company name:' ,cars.corolla.yaris.name, 'car name' ,cars.corolla.yaris.company, cars.corolla.yaris.calc(), cars.corolla.yaris.colors);
+console.log('company name:' ,cars.corolla.yaris.name, 'car name' ,cars.corolla.yaris.company, cars.corolla.yaris.colors);
 
