@@ -47,26 +47,35 @@ const cars = {
         },
         yaris:{
             name: "Yaris",
-            price: "450000",
+            price: 450000,
             colors: [ "gray", 'red'],
+            disMonth: [6,7, 10],
+            discount: function(dis){                
+                var bestPrice = this.price
+                var date = new Date()
+                var month = date.getMonth()
+                var calcPrice = bestPrice * dis
+
+                for(var i = 0; i < this.disMonth.length; i++){
+                    if(this.disMonth[i] == month){
+                        return bestPrice - calcPrice
+                    }
+                }
+                return bestPrice
+            },
             company:{
                 name: "Corolla"
             },
-            calc: ()=>{
-                for (var i = 0; i < cars.corolla.yaris.colors.length; i++) {
-                    if (cars.corolla.yaris.colors[i] == 'gray') {
-                        cars.corolla.yaris.colors[i] = 'green'
-                        console.log("Updated colors:", cars.corolla.yaris.colors);
-                        break;
-                    }
-                }
-            }
         }
 
     },
 }
 
-console.log('company name:' ,cars.honda.civic.company.name, 'car name' ,cars.honda.civic.name);
-console.log('company name:' ,cars.daihatsu.Move.company.name, 'car name' ,cars.daihatsu.Move.name);
-console.log('company name:' ,cars.corolla.yaris.name, 'car name' ,cars.corolla.yaris.company, cars.corolla.yaris.colors);
+
+var caller = cars.corolla.yaris.discount(.20)
+console.log(caller);
+
+// console.log('company name:' ,cars.honda.civic.company.name, 'car name' ,cars.honda.civic.name);
+// console.log('company name:' ,cars.daihatsu.Move.company.name, 'car name' ,cars.daihatsu.Move.name);
+// console.log('company name:' ,cars.corolla.yaris.name, 'car name' ,cars.corolla.yaris.company, cars.corolla.yaris.colors);
 
