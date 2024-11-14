@@ -145,7 +145,27 @@ honda:{
 }
 
 
-var campany = prompt("Search campany")
-var modal = prompt("Search modal")
+// var campany = prompt("Search campany")
+// var modal = prompt("Search modal")
 
-console.log(cars[campany][modal]);
+// console.log(cars[campany][modal]);
+
+
+function Person(name, age) {
+    this.name = name;  // Ye har object ke liye unique value hogi
+    this.age = age;    // Ye bhi har object ke liye unique value hogi
+    this.sayHello = function() {
+        return "Hello, " + this.name;
+    };
+}
+
+// Naye objects banaye
+let person1 = new Person("Ali", 25);
+let person2 = new Person("Sara", 30);
+
+
+console.log(person1.sayHello());  // Output: "Hello, Ali"
+console.log(person2.sayHello());  // Output: "Hello, Sara"
+
+console.log(person1);
+console.log(person2);
