@@ -137,7 +137,7 @@ honda:{
             mira:{
                 name: "mira",
                 price: "2200923233",
-                colors: ["gray", "black", "white"],
+                colors: ["gray", "black", "white", 'red'],
                 company:{
                     name: "mira"
                 }
