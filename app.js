@@ -1,5 +1,5 @@
 // const cars = {
-//     honda:{
+//    honda:{
 //         civic:{
 //             name: "Civic 2024",
 //             price: "2200933",
@@ -78,4 +78,40 @@
 // // console.log('company name:' ,cars.honda.civic.company.name, 'car name' ,cars.honda.civic.name);
 // // console.log('company name:' ,cars.daihatsu.Move.company.name, 'car name' ,cars.daihatsu.Move.name);
 // // console.log('company name:' ,cars.corolla.yaris.name, 'car name' ,cars.corolla.yaris.company, cars.corolla.yaris.colors);
+
+
+
+
+function Cars (name, date, team){  
+    this.name = name,
+    this.date = date,
+    this.team = team
+    this.heading = []
+    this.img = []
+
+    for(var i of team){
+        this.heading.push(i.teamName)
+        this.img.push(i.img)
+    }
+}
+
+let team1 = [
+    {teamName: 'pakistan', img: './pakistan.jpg'},
+    {teamName: 'india', img: './india.jpg'}
+]
+
+let team2 = [
+    {teamName: 'lahore', img: './lahore.jpg'},
+    {teamName: 'india', img: './india.jpg'}
+]
+
+let team3 = [
+    {teamName: 'islamabad', img: './islamabad.jpg'},
+    {teamName: 'lahore', img: './lahore.jpg'}
+]
+
+
+console.log(new Cars('india',  '20, oct' , team1));
+console.log(new Cars('pakistan' ,'12 oct' ,  team2));
+console.log(new Cars('lahore', '2 oct' , team3));
 
