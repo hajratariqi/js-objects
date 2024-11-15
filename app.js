@@ -152,8 +152,8 @@ honda:{
 
 
 function Person(name, age) {
-    this.name = name;  // Ye har object ke liye unique value hogi
-    this.age = age;    // Ye bhi har object ke liye unique value hogi
+    this.name = name; 
+    this.age = age;    
     this.sayHello = function() {
         return "Hello, " + this.name;
     };
