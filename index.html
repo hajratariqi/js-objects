@@ -4,9 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            text-align: center;
+        }
+        .card{
+            border: 1px solid #dadada;
+            width: 25%;
+            border-radius: 20px;
+            margin-top: 20px;
+            margin: auto;
+            margin-top: 40px;
+        }
+        .card > img{
+            width: 90%;
+            height: 200px;
+            object-fit: cover;
+        }
+    </style>
 </head>
 <body>
+
+    <select  name="cars" id="campany" onchange="selectCompany()"></select>
+    <br><br>
+
+    <select name="carsModal" id="modal">
+        <option >Select car modal</option>
+    </select>
+
+    <br><br>
     
+    <button onclick="searchCar()">Search</button>
+
+    <div id="main"></div>
+
     <script src="app.js"></script>
 </body>
 </html>

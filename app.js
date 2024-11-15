@@ -1,20 +1,19 @@
 const cars = {
    honda:{
         civic:{
-            name: "Honda Civic ",
+            name: " Civic ",
             price: "2200933",
             colors: ["red", "black", "white"],
             modal: "2504",
             img : './assets/civic.jpg'
         },
         hondaCity:{
-            name: "Honda City",
+            name: "City",
             price: "2200923233",
             colors: ["gray", "black", "white"],
             modal: "2004",
             img : './assets/honda-city.png'
         }
-
     },
     daihatsu:{
         Move:{
@@ -50,3 +49,34 @@ const cars = {
 
     },
 }
+
+let campany = document.getElementById('campany')
+let modal = document.getElementById('modal')
+let main = document.getElementById('main')
+
+for(let key in cars){
+    campany.innerHTML += `<option value=${key}>${key}</option>`
+}
+
+const selectCompany = () =>{
+      modal.innerHTML = ""
+    for(let key in cars[campany.value]){
+        modal.innerHTML += `<option value=${key}>${key}</option>`
+    }
+}
+
+const searchCar = () =>{
+   let currectCard  = cars[campany.value][modal.value];
+   localStorage.setItem('selectedCar', JSON.stringify(currectCard))
+   let value = JSON.parse(localStorage.getItem('selectedCar'))
+   
+   main.innerHTML = `<div class='card'>
+        <img src=${value.img} alt=${value.name} />
+            <h1>${value.name}</h1>
+            <p>Price ${value.price}</p>
+            <p>Colors: ${value.colors.join(', ')}</p>
+            <p>Modal: ${value.modal}</p>
+        </div>`;
+}
+
+selectCompany();
