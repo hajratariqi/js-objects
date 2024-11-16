@@ -5,7 +5,7 @@ const cars = {
             price: "2200933",
             colors: ["red", "black", "white"],
             modal: "2504",
-            img : './assets/civic.jpg',
+            img: './assets/civic.jpg',
             company: {name: 'honda'}
         },
         hondaCity:{
@@ -13,7 +13,7 @@ const cars = {
             price: "2200923233",
             colors: ["gray", "black", "white"],
             modal: "2004",
-            img : './assets/honda-city.png',
+            img: './assets/honda-city.png',
             company: {name: 'honda'}
         }
     },
@@ -23,7 +23,7 @@ const cars = {
             price: "1200933",
             colors: ["red", "blue", "white"],
             modal: "2000",
-            img : './assets/move.webp',
+            img: './assets/move.webp',
             company: {name: 'daihatsu'}
         },
         mira:{
@@ -31,7 +31,7 @@ const cars = {
             price: "1093233",
             colors: ["red", "gray", "yellow"],
             modal: "2024",
-            img : './assets/mira.jpeg',
+            img: './assets/mira.jpeg',
             company: {name: 'daihatsu'}
         }
     },
@@ -41,7 +41,7 @@ const cars = {
             price: "2000000",
             colors: ["white"],
             modal: "1964",
-            img : './assets/altis.webp',
+            img: './assets/altis.webp',
             company: {name: 'corolla'}
         },
         yaris:{
@@ -49,7 +49,7 @@ const cars = {
             price: 450000,
             colors: [ "gray", 'red'],
             modal: "2022",
-            img : './assets/yaris.png',
+            img: './assets/yaris.png',
             company: {name: 'corolla'}
         }
     },
