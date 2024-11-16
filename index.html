@@ -9,8 +9,9 @@
             text-align: center;
         }
         .card{
-            border: 1px solid #dadada;
-            width: 25%;
+            box-shadow: 1px 2px 1px #dadada;
+            width: 30%;
+            height: 300px;
             border-radius: 20px;
             margin-top: 20px;
             margin: auto;
@@ -18,18 +19,20 @@
         }
         .card > img{
             width: 90%;
-            height: 200px;
-            object-fit: cover;
+            height: 100px;
+            object-fit: contain;;
         }
     </style>
 </head>
 <body>
 
-    <select  name="cars" id="campany" onchange="selectCompany()"></select>
+    <select name="cars" id="campany" onchange="selectCompany()">
+        <option selected>Select car campany</option>
+    </select>
     <br><br>
 
     <select name="carsModal" id="modal">
-        <option >Select car modal</option>
+        <option selected>Select car modal</option>
     </select>
 
     <br><br>
@@ -37,7 +40,6 @@
     <button onclick="searchCar()">Search</button>
 
     <div id="main"></div>
-
     <script src="app.js"></script>
 </body>
 </html>

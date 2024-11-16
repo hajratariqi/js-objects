@@ -59,7 +59,7 @@ for(let key in cars){
 }
 
 const selectCompany = () =>{
-      modal.innerHTML = ""
+    modal.innerHTML = ""
     for(let key in cars[campany.value]){
         modal.innerHTML += `<option value=${key}>${key}</option>`
     }
@@ -68,15 +68,19 @@ const selectCompany = () =>{
 const searchCar = () =>{
    let currectCard  = cars[campany.value][modal.value];
    localStorage.setItem('selectedCar', JSON.stringify(currectCard))
-   let value = JSON.parse(localStorage.getItem('selectedCar'))
-   
-   main.innerHTML = `<div class='card'>
-        <img src=${value.img} alt=${value.name} />
-            <h1>${value.name}</h1>
-            <p>Price ${value.price}</p>
-            <p>Colors: ${value.colors.join(', ')}</p>
-            <p>Modal: ${value.modal}</p>
-        </div>`;
+   displayData();
 }
+const displayData = () =>{
+    const value = JSON.parse(localStorage.getItem('selectedCar'));
 
-selectCompany();
+    if(value){
+    main.innerHTML = `<div class='card'>
+         <img src=${value.img} alt=${value.name} />
+             <h1>${value.name}</h1>
+             <p>Price ${value.price}</p>
+             <p>Colors: ${value.colors.join(', ')}</p>
+             <p>Modal: ${value.modal}</p>
+         </div>`;
+        }
+    }
+displayData()
