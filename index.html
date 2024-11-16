@@ -26,14 +26,13 @@
 </head>
 <body>
 
-    <select name="cars" id="campany" onchange="selectCompany(this)">
+    <select name="cars" id="campany" onchange="selectCompany()">
+        <option selected>Select car campany</option>
     </select>
     <br><br>
 
-    <select name="carsModal" id="carsModal" onchange="selectModal(this)">
+    <select name="carsModal" id="modal">
         <option selected>Select car modal</option>
-        <option>City</option>
-        <option>Fortuner</option>
     </select>
 
     <br><br>
@@ -41,7 +40,6 @@
     <button onclick="searchCar()">Search</button>
 
     <div id="main"></div>
-    <!-- <script src="app.js"></script> -->
-    <script src="task.js"></script>
+    <script src="app.js"></script>
 </body>
 </html>

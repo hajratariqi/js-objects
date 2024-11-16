@@ -6,9 +6,7 @@ const cars = {
             colors: ["red", "black", "white"],
             modal: "2504",
             img : './assets/civic.jpg',
-            company: {
-                name: 'honda'
-            }
+            company: {name: 'honda'}
         },
         hondaCity:{
             name: "City",
@@ -16,9 +14,7 @@ const cars = {
             colors: ["gray", "black", "white"],
             modal: "2004",
             img : './assets/honda-city.png',
-            company: {
-                name: 'honda'
-            }
+            company: {name: 'honda'}
         }
     },
     daihatsu:{
@@ -28,9 +24,7 @@ const cars = {
             colors: ["red", "blue", "white"],
             modal: "2000",
             img : './assets/move.webp',
-            company: {
-                name: 'daihatsu'
-            }
+            company: {name: 'daihatsu'}
         },
         mira:{
             name: "Mira",
@@ -38,9 +32,7 @@ const cars = {
             colors: ["red", "gray", "yellow"],
             modal: "2024",
             img : './assets/mira.jpeg',
-            company: {
-                name: 'daihatsu'
-            }
+            company: {name: 'daihatsu'}
         }
     },
      corolla:{
@@ -50,9 +42,7 @@ const cars = {
             colors: ["white"],
             modal: "1964",
             img : './assets/altis.webp',
-            company: {
-                name: 'corolla'
-            }
+            company: {name: 'corolla'}
         },
         yaris:{
             name: "Yaris",
@@ -60,11 +50,8 @@ const cars = {
             colors: [ "gray", 'red'],
             modal: "2022",
             img : './assets/yaris.png',
-            company: {
-                name: 'corolla'
-            }
+            company: {name: 'corolla'}
         }
-
     },
 }
 
