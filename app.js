@@ -8,7 +8,7 @@ const cars = {
             img: './assets/civic.jpg',
             company: {name: 'honda'}
         },
-        hondaCity:{
+        city:{
             name: "City",
             price: "2200923233",
             colors: ["gray", "black", "white"],
@@ -36,7 +36,7 @@ const cars = {
         }
     },
      corolla:{
-        CorollaAltis:{
+        altis:{
             name: "Altis",
             price: "2000000",
             colors: ["white"],
@@ -64,7 +64,7 @@ for(let key in cars){
 }
 
 const selectCompany = () =>{
-    modal.innerHTML = ""
+    modal.innerHTML = ""    
     for(let key in cars[campany.value]){
         modal.innerHTML += `<option value=${key}>${key}</option>`
     }
@@ -72,7 +72,7 @@ const selectCompany = () =>{
 
 const searchCar = () =>{
    let currectCard  = cars[campany.value][modal.value];
-   setData = localStorage.setItem('selectedCar', JSON.stringify(currectCard))
+   localStorage.setItem('selectedCar', JSON.stringify(currectCard))
    displayData();
 }
 
@@ -80,7 +80,7 @@ const displayData = () =>{
     const value = JSON.parse(localStorage.getItem('selectedCar'));
     if(value){
     main.innerHTML = `<div class='card'>
-         <img src=${value.img} alt=${value.name} />
+            <img src=${value.img} alt=${value.name} />
              <h1>${value.name}</h1>
              <p>Price ${value.price}</p>
              <p>Colors: ${value.colors.join(', ')}</p>
