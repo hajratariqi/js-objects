@@ -7,5 +7,39 @@
 </head>
 <body>
     
+    <div>
+        <input type="text" name="name" id="name" placeholder="Your name">
+        <br>
+        <br>
+        <input type="text" name="address" id="address" placeholder="Your address">
+        <br>
+        <br>
+        <input type="radio" name="gender" value="female" id="female">Female
+        <br>
+        <br>
+        <input type="radio" name="gender" value="male" id="male">Male
+        <br>
+        <br>
+        <select name="Education" id="education">
+        <option value="">Select education</option>
+            <option value="School">High School</option>
+            <option value="graduate">High Graduate</option>
+            <option value="postGraduate">High Post Graduate</option>
+        </select>
+        <br>
+        <br>
+
+        <select name="profession" id="profession">
+        <option value="">Select profession</option>
+            <option value="doctor">doctor</option>
+            <option value="engineer"> Engineer</option>
+            <option value="teacher">Teacher</option>
+        </select>
+        <br>
+        <br>
+        <button onclick="saveData()">Save</button>
+
+    </div>
+    <script src="./app.js"></script>
 </body>
 </html>
