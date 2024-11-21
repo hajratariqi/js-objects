@@ -58,7 +58,6 @@ for(let key of gender){
 try{
     let saveData = localStorage.getItem('Person')
     saveData ? oldUser = JSON.parse(saveData) : oldUser = []
-    
     let Person = function (name, selectedGender, education, profession)
     {
         this.name = name,  this.gender = selectedGender,  this.education = education,  this.profession = profession
